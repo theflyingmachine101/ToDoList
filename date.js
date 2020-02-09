@@ -1,4 +1,4 @@
-exports.getDate=function()
+xports.getDate=function()
 {
   var CurrentDay= new Date();
   var options={

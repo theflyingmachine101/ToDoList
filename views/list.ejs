@@ -4,10 +4,13 @@
 </div>
 <div class="box">
     <%for(var i=0;i<item.length;++i){%>
+        <form  action="/delete" method="post">
       <div class="item">
-        <input type="checkbox" >
-        <p><%=item[i]%></p>
+        <input type="checkbox" name="checkbox" value="<%=item[i]._id%>" onchange="this.form.submit()">
+        <p><%=item[i].task%></p>
+        <input type="hidden" name="title" value="<%=Title%>">
       </div>
+      </form>
     <%}%>
     <form class="item" action="/" method="post">
       <input type="text" name="task" placeholder="New Item" autocomplete="off">
